@@ -111,7 +111,7 @@ resource "kubernetes_deployment" "media-wiki-deployment" {
   metadata {
     name = "media-wiki-deployment"
     labels = {
-      test = "mediaWiki"
+      test = "media-wiki"
     }
   }
 
@@ -120,14 +120,14 @@ resource "kubernetes_deployment" "media-wiki-deployment" {
 
     selector {
       match_labels = {
-        test = "mediaWiki"
+        test = "media-wiki"
       }
     }
 
     template {
       metadata {
         labels = {
-          test = "mediaWiki"
+          test = "media-wiki"
         }
       }
 
@@ -158,7 +158,7 @@ resource "kubernetes_service" "media-wiki-service" {
   }
   spec {
     selector = {
-      test = "mediaWiki"
+      test = "media-wiki"
     }
     port {
       port        = 80
