@@ -134,7 +134,7 @@ resource "kubernetes_deployment" "media-wiki-deployment" {
       spec {
         container {
           image = "mediawiki:1.35.0"
-          name  = "mediaWiki"
+          name  = "media-wiki"
 
           resources {
             limits {
