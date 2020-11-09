@@ -107,7 +107,7 @@ provider "kubernetes" {
   version                = "~> 1.11"
 }
 
-resource "kubernetes_deployment" "mediaWiki" {
+resource "kubernetes_deployment" "mediaWikiDeployment" {
   metadata {
     name = "mediaWikiDeployment"
     labels = {
@@ -152,7 +152,7 @@ resource "kubernetes_deployment" "mediaWiki" {
   }
 }
 
-resource "kubernetes_service" "mediaWiki" {
+resource "kubernetes_service" "mediaWikiService" {
   metadata {
     name = "mediaWikiService"
   }
