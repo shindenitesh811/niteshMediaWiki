@@ -109,7 +109,7 @@ provider "kubernetes" {
 
 resource "kubernetes_deployment" "mediaWikiDeployment" {
   metadata {
-    name = "mediaWikiDeployment"
+    name = "media-wiki-deployment"
     labels = {
       test = "mediaWiki"
     }
@@ -154,7 +154,7 @@ resource "kubernetes_deployment" "mediaWikiDeployment" {
 
 resource "kubernetes_service" "mediaWikiService" {
   metadata {
-    name = "mediaWikiService"
+    name = "media-wiki-service"
   }
   spec {
     selector = {
